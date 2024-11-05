@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Dzik - Gra</title>
+        <link rel ="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+        
+    <body>
+        <h1> Zagraj w gre Dzik</h1>
+
+
+        <div class="container">
+            <div class="box box1">
+                <div class="boxFrame">
+                    <h3 id = "h3Box">Best Scores: </h3>
+                    <div class="scoresLvl1">
+                        <h4 class="h4Box">Poziom lvl1:</h4>
+                        <div class="wynik">
+                            <div class="koronaLvl"></div>
+                            <div class = "scoreLvl" id = "scoreLvl1"></div>
+                            <div class = "nameLvl" id="nameLvl1"></div>
+                        </div>                    
+                    </div>
+    
+                    <div class="scoresLvl1">
+                        <h4 class="h4Box">Poziom lvl2:</h4>
+                        <div class="wynik">
+                            <div class="koronaLvl"></div>
+                            <div class = "scoreLvl" id = "scoreLvl2"></div>
+                            <div class = "nameLvl" id="nameLvl2"></div>
+                        </div>                    
+                    </div>
+
+
+                    <div class="scoresLvl1">
+                        <h4 class="h4Box">Poziom lvl3:</h4>
+                        <div class="wynik">
+                            <div class="koronaLvl"></div>
+                            <div class = "scoreLvl" id = "scoreLvl3"></div>
+                            <div class = "nameLvl" id="nameLvl3"></div>
+                        </div>                    
+                    </div>
+
+                    <div class="scoresLvl1">
+                        <h4 class="h4Box">Poziom lvlMix:</h4>
+                        <div class="wynik">
+                            <div class="koronaLvl"></div>
+                            <div class = "scoreLvl" id = "scoreLvl4"></div>
+                            <div class = "nameLvl" id="nameLvl4"></div>
+                        </div>                    
+                    </div>
+                </div>  
+            </div>
+           
+
+
+            <div class="box2 box">
+                <div id="losowanie"><p> Are you ready??</p></div>
+                <button id = "dzikButton" onclick="checkNum()">DZIK</button>
+            
+                <div class="scoreHeartDiv">
+                    <div class = "scoreDiv">
+                        <h3>Score: </h3>
+                        <div id="score">0</div>
+                    </div>
+                        
+                    <div class="heartDiv">
+                        <h3>zycia: </h3>
+                        <div id = "hearts">3</div>                
+                    </div>  
+                </div>
+            </div>
+
+
+            <div class="box box3">
+                <div class = "rules">
+                    <p class="pRules">Jak liczba jest podzielna przez 7 lub zawiera cyfre 7, to kliknij przysik DZIK.</p>
+                    <p class="pRules">Mozesz grać samemu lub na zmianę z inną osobą i konkurować o pozycje w rankingu.</p>
+                    <p class="pRules">1. Wpisz swoje imie</p>
+                    <p class="pRules">2. Wybierz poziom gry</p>
+                    <p class="pRules">3. Good luck!!1</p>
+                </div>
+                <input type = "text" id = "imie" placeholder="Wpisz swoje imie: ">
+                <br>
+                <button onclick = "saveName()">Zapisz</button>
+            </div>
+          </div>
+        
+
+
+        <div class = "buttonsLvl">
+            <h2>Wybierz poziom trudnosci:</h2>
+            <button id="przycisk" onclick = "lvl1()">Level 1</button>
+            <button id="przycisk" onclick = "lvl2()">Level 2</button>
+            <button id="przycisk" onclick = "lvl3()">Level 3</button>
+            <button id="przycisk" onclick = "lvlMix()">Lvl MIX</button>
+            <br>
+            <br>
+        </div>
+
+
+        <div id = "timer"></div>
+        <div class="end_koniec"></div>
+        <div class="check">elo</div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

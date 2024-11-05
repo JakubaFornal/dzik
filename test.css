@@ -1,0 +1,32 @@
+
+.container{
+    display: flex;
+}
+
+.box1{
+    width: 33vw;
+    background-color: rgb(238, 195, 195);
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box2{
+    width: 33vw;
+    background-color: rgb(149, 117, 117);
+}
+
+.box3{
+    width: 33vw;
+    background-color: rgb(107, 194, 14);
+
+}
+
+.boxer1{
+    background-color: blue;
+    width: 200px;
+    height: 60px;
+    
+}

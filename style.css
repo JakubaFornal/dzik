@@ -1,0 +1,169 @@
+body{
+    height: 100%;
+    margin: 0;
+    margin-top: 100px;
+}
+.container {
+    display: flex;
+  }
+
+  #h3Box{
+    text-align: center;
+    margin-bottom: -0.5vw;
+    color: black;
+  }
+  
+  .box1 {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    gap: 20px;
+  }
+
+  .boxFrame{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+  }
+
+  .scoresLvl1{
+    border: 2px solid black;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 45px;
+    padding: 6px;
+    border-radius: 10px;
+    padding-left: 10px;
+    gap: 5px;
+  }
+
+  .scoreLvl{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: left;
+    padding-left: 10px;
+    font-size: large;
+    color: black;
+  }
+
+  .nameLvl{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 40%;
+    padding-right: 20px;
+    color: black;
+  }
+
+  .koronaLvl{
+    height: 25px;
+    width: 25px;
+    background-image: url(korona.png);
+    background-size: contain;
+    
+  }
+
+  .h4Box{
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    color: black;
+   
+  }
+  .wynik{
+    display: flex;
+  }
+  
+  .box2 {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px;
+  }
+  
+  .box3 {
+   
+    width: 30vw;
+
+  }
+  
+  .box {
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+  }
+
+
+
+h1 {
+    text-align: center;
+}
+
+
+#losowanie{
+    font-size: 60px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+
+.buttonsLvl{
+    font-size: 20px;
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+#przycisk{
+    background-color: rgb(5, 148, 0);
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+}
+
+#dzikButton{
+    background-color: rgb(134, 76, 0);
+    height: 50px;
+    width: 110px;
+    font-size: 20px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.scoreDiv, .heartDiv{
+    display: flex; 
+    justify-content: space-around;
+    background-color: blueviolet;
+    width: 100px;
+    align-items: center;
+}
+
+.scoreHeartDiv{
+  display: flex;
+  width: 250px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rules{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-around;
+  color: black;
+  padding-bottom: 20px;
+}
+.pRules{
+
+}
