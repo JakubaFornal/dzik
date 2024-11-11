@@ -47,6 +47,7 @@ body{
     border-radius: 10px;
     padding-left: 10px;
     gap: 5px;
+    background-color: rgb(243, 243, 243);
   }
 
   .scoreLvl{
