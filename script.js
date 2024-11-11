@@ -10,6 +10,18 @@ function myFunction(){
     currNum++;
     losDiv.innerHTML = currNum;
     num = currNum;
+    losDiv.style.fontSize = "75px";
+}
+
+
+
+function myFunctionLosowe(){
+    clicked = false;
+    let liczba = Math.floor((Math.random() * 100) % 100);
+    losDiv.innerHTML = liczba;
+    num = liczba;
+    currNum = liczba;
+    losDiv.style.fontSize = "75px";
 }
 
 
@@ -18,16 +30,19 @@ var counter = 0;
 document.write(currNum);
 
 //Sprawdzanie liczby
-function checkNum(){        // czy podzlielne
-    if(clicked == false){
+function checkNum(){     // czy podzlielne
+    if(clicked == false && currNum != 0){
         if(currNum % 7 == 0 || contain_num())
             counter++;
-        else    
+        else{
             hearts--;
+            heart_update();
+        }
+            
     
     clicked = true;
     scoreDiv.innerHTML = counter;
-    heartDiv.innerHTML = hearts;
+    
     if(hearts <= 0)
         endGame();
     }
@@ -35,15 +50,41 @@ function checkNum(){        // czy podzlielne
 
 
 function contain_num(){     // czy zawiera liczbe
-    while(num > 0){
-        if(num % 10 == 7){
-            return true;
-        }
-        else{
-            num = num / 10;
-        }
+    let word = currNum.toString();
+    let x = "7";
+    if(word.indexOf(x) !== -1){
+        return true;
     }
-    return false;
+        return false;
+}
+
+
+function heart_update(){
+    let heart1 = document.querySelector(".heart1");
+    let heart2 = document.querySelector(".heart2");
+    let heart3 = document.querySelector(".heart3");
+
+    
+    if(hearts == 2){
+        heart3.style.opacity = 0;
+    }
+    if(hearts == 1){
+        heart2.style.opacity = 0;
+    }
+    if(hearts == 0){
+        heart1.style.opacity = 0;
+    }
+}
+
+function heart_reset(){
+    let heart1 = document.querySelector(".heart1");
+    let heart2 = document.querySelector(".heart2");
+    let heart3 = document.querySelector(".heart3");
+
+        heart3.style.opacity = 1;
+        heart2.style.opacity = 1;
+        heart1.style.opacity = 1;
+
 }
 
 
@@ -52,13 +93,14 @@ let interval = 0;
 var lvl = 0;
 
 function starterPack(){
+    document.querySelector(".end_koniec").innerHTML="";
     currNum = 0;
     counter = 0;
     scoreDiv.innerHTML = counter;
     clearInterval(interval);
     let clicked = false;
     hearts = 3;
-    heartDiv.innerHTML = hearts;
+    heart_reset();
 }
 
 //Levels
@@ -81,13 +123,10 @@ function lvl3(){
 }
 
 //Increasing speed Lvl
-var freq;
 function lvlMix(){
     lvl = 4;
     starterPack();
-    freq = 3000; // 5s
-    interval = setInterval(myFunction, freq)
-    setInterval(changer, 100000); // 10s
+    interval = setInterval(myFunctionLosowe, 500);
 }
 
 function changer(){     //changing speeed
@@ -97,6 +136,8 @@ function changer(){     //changing speeed
     }
     interval = setInterval(myFunction, freq);
 }
+
+
 
 var sec = 0;
 function timer(){
@@ -114,7 +155,7 @@ function saveName(){
 
 
 var bestScore = 0;
-var score1 = 0, score2 = 0, score3 = 0;
+var score1 = 0, score2 = 0, score3 = 0, score4 = 0;
 
 function endGame(){
     document.querySelector(".end_koniec").innerHTML="KONIEC GRY";
@@ -139,7 +180,6 @@ function endGame(){
             document.getElementById("scoreLvl3").innerHTML = imie;
         }
     }
-
     if(lvl == 4){
         if(counter >= score4){
             score4 = counter;

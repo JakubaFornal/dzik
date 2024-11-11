@@ -3,10 +3,14 @@
         <title>Dzik - Gra</title>
         <link rel ="stylesheet" href="style.css">
         <meta charset="UTF-8">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     </head>
         
     <body>
-        <h1> Zagraj w gre Dzik</h1>
+        <h1> Zagraj w grę Dzik</h1>
 
 
         <div class="container">
@@ -56,6 +60,7 @@
 
             <div class="box2 box">
                 <div id="losowanie"><p> Are you ready??</p></div>
+                <div class="end_koniec"></div>
                 <button id = "dzikButton" onclick="checkNum()">DZIK</button>
             
                 <div class="scoreHeartDiv">
@@ -65,43 +70,45 @@
                     </div>
                         
                     <div class="heartDiv">
-                        <h3>zycia: </h3>
-                        <div id = "hearts">3</div>                
+                        <div class = "heart1"></div>  
+                        <div class = "heart2"></div>  
+                        <div class = "heart3"></div>                
                     </div>  
+                </div>
+
+                <div class = "buttonsLvl">
+                    <h2>Wybierz poziom trudnosci:</h2>
+                    <button id="przycisk" onclick = "lvl1()">Level 1</button>
+                    <button id="przycisk" onclick = "lvl2()">Level 2</button>
+                    <button id="przycisk" onclick = "lvl3()">Level 3</button>
+                    <button id="przycisk" onclick = "lvlMix()">Lvl MIX</button>
+                    <br>
+                    <br>
                 </div>
             </div>
 
 
             <div class="box box3">
+                <div class = "dzikImg"></div>
                 <div class = "rules">
                     <p class="pRules">Jak liczba jest podzielna przez 7 lub zawiera cyfre 7, to kliknij przysik DZIK.</p>
                     <p class="pRules">Mozesz grać samemu lub na zmianę z inną osobą i konkurować o pozycje w rankingu.</p>
-                    <p class="pRules">1. Wpisz swoje imie</p>
-                    <p class="pRules">2. Wybierz poziom gry</p>
-                    <p class="pRules">3. Good luck!!1</p>
+                    <p class="pRules1">1. Wpisz swoje imie</p>
+                    <p class="pRules1">2. Wybierz poziom gry</p>
+                    <p class="pRules1">3. Good luck!!1</p>
                 </div>
                 <input type = "text" id = "imie" placeholder="Wpisz swoje imie: ">
                 <br>
-                <button onclick = "saveName()">Zapisz</button>
+                <button onclick = "saveName()" id = "save">Zapisz</button>
             </div>
           </div>
+
+          <div class="gameOver"></div>
+
         
 
 
-        <div class = "buttonsLvl">
-            <h2>Wybierz poziom trudnosci:</h2>
-            <button id="przycisk" onclick = "lvl1()">Level 1</button>
-            <button id="przycisk" onclick = "lvl2()">Level 2</button>
-            <button id="przycisk" onclick = "lvl3()">Level 3</button>
-            <button id="przycisk" onclick = "lvlMix()">Lvl MIX</button>
-            <br>
-            <br>
-        </div>
-
-
-        <div id = "timer"></div>
-        <div class="end_koniec"></div>
-        <div class="check">elo</div>
+        
 
         <script src="script.js"></script>
     </body>
